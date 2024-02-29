@@ -16,5 +16,8 @@ start:
 
 restart: build start 
 
+format_all_code:
+	go fmt ./...
+
 # connection string
 # mongodb://admin:password@localhost:27017/todos_db?authSource=admin&readPreference=primary&appname=MongDB%20Compass&directConnection=true&ssl=false
