@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  mongodb:
+    container_name: ${DB_CONTAINER_NAME}
+    image: "mongo:4.2.16-bionic"
+    environment:
+      - MONGO_INITDB_DATABASE=${MONGO_DB}
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_DB_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_DB_PASSWORD}
+    ports:
+      - "27017:27017"
